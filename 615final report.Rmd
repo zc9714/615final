@@ -1,0 +1,33 @@
+---
+title: "MA615 Final Project"
+subtitle: 'Project 3 portfolio manager'
+author: "Chi Zhang"
+date: "2020/12/14"
+output: html_document
+---
+# Introduction
+In this project, I built an app by using online investment advice that was available at the beginning of July 2020. to make investment decisions and then track my investments through the fall until 1 December. The Shiny app I built is called portfolio manager, which can check track the value of individual positions, positions by category, and portfolio value. To access financial data online, I used package “tidyquant”. In this application, you would initially have $250,000 in cash starting on 1 July 2020, user can adjust the weight of five stocks to invest, and it would show how the portfolio goes until 1 December 2020.
+
+# How to use
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('p1.png')
+```
+In the beginning, users are asked to choose the starting date and ending date. The range of choice is between 2020-7-1 to 2020-11-30. There are 5 popular stocks to compose your portfolio, Google, Amazon, Facebook, Netflix, and S&P 500 Bear 1X. User can separately type in or adjust weight of stocks by 0.05 each step. Weight must be a decimal number between 0 to 1, in addition, the sum of total 5 stocks weight cannot exceed 1.
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('p2.png')
+```
+
+After doing the above steps, you will get a plot which shows the tendency of your portfolio values from 2020-7-1 to 2020-11-30. You can change the weight of stocks by referring online opinions to maximize your money in December. For example, if you set all weight as 0.2, you will eventually get around $267141 in December 1st.
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('p3.png')
+```
+
+What is more, you can access more data by clicking the “Data” button nearby the Portfolio. You can see different standard financial chats given a time series by choosing different stocks. When you change the date range in the top, the plot would change. You will get more details by narrowing down the date range.
+
+```{r echo=FALSE, out.width='100%'}
+knitr::include_graphics('p4.png')
+```
+
+The table above is the data of your selected stock with date. You can change stock and date as same as the previous plot. The table shows important columns such as date, open, close, and adjusted, etc.
